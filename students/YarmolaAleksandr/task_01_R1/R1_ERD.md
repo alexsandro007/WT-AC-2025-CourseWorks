@@ -48,13 +48,11 @@ LIKE {
 }
 ```
 
-
 ## ASCII-эскиз
 
 User 1---* Post --- Comment
 | |
 --- Like --- Tag (many-to-many)
-
 
 ## Минимальный SQL DDL (пример, PostgreSQL)
 
