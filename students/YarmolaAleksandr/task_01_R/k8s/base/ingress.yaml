@@ -1,3 +1,4 @@
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -15,7 +16,8 @@ metadata:
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/cors-allow-origin: "*"
 spec:
-  ingressClassName: nginx  # Используйте соответствующий класс для вашего кластера
+  ingressClassName: nginx
+  # Используйте соответствующий класс для вашего кластера
   rules:
     # Frontend
     - host: longread.local

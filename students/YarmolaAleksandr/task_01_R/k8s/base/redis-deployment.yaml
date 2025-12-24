@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -55,4 +56,4 @@ spec:
               mountPath: /data
       volumes:
         - name: redis-storage
-          emptyDir: {}  # Для production используйте PVC
+          emptyDir: { }  # Для production используйте PVC

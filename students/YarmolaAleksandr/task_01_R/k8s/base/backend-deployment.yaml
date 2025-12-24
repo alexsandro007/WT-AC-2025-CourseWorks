@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -111,4 +112,4 @@ spec:
               mountPath: /app/logs
       volumes:
         - name: logs
-          emptyDir: {}
+          emptyDir: { }
