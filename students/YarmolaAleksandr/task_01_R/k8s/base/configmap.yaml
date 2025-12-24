@@ -10,13 +10,13 @@ data:
   # Backend configuration
   LOG_LEVEL: "info"
   NODE_ENV: "production"
-  
+
   # Database configuration
   POSTGRES_DB: "longread_blog"
-  
+
   # Redis configuration
   REDIS_HOST: "redis-service"
   REDIS_PORT: "6379"
-  
+
   # Frontend configuration
   REACT_APP_API_URL: "http://api.longread.local"

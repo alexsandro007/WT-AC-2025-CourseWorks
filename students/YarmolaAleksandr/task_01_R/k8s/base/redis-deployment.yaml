@@ -56,4 +56,4 @@ spec:
               mountPath: /data
       volumes:
         - name: redis-storage
-          emptyDir: { }  # Для production используйте PVC
+          emptyDir: { }

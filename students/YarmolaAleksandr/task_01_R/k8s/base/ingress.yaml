@@ -7,17 +7,13 @@ metadata:
   labels:
     app: longread-blog
   annotations:
-    # Для NGINX Ingress Controller
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    # Для больших тел запросов (загрузка изображений)
     nginx.ingress.kubernetes.io/proxy-body-size: "10m"
-    # CORS для разработки
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/cors-allow-origin: "*"
 spec:
   ingressClassName: nginx
-  # Используйте соответствующий класс для вашего кластера
   rules:
     # Frontend
     - host: longread.local
@@ -41,7 +37,7 @@ spec:
                 name: backend-service
                 port:
                   number: 5000
-  # Для production добавьте TLS:
+  # production TLS:
   # tls:
   #   - hosts:
   #       - longread.local

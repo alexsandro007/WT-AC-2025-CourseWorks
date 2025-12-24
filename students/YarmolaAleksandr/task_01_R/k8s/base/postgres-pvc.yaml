@@ -12,7 +12,3 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  # Укажите storageClassName в зависимости от вашего кластера
-  # Для Minikube: storageClassName: standard
-  # Для облачных провайдеров могут быть другие классы
-  # storageClassName: standard

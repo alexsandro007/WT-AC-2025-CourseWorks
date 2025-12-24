@@ -15,4 +15,4 @@ spec:
       name: postgres
   selector:
     app: postgres
-  clusterIP: None  # Headless service для StatefulSet
+  clusterIP: None

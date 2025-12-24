@@ -21,7 +21,6 @@ spec:
         prometheus.io/path: "/metrics"
     spec:
       initContainers:
-        # Init container для миграций базы данных
         - name: migrations
           image: longread-backend:latest
           imagePullPolicy: Never

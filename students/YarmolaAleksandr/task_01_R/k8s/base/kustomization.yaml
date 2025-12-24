@@ -20,15 +20,12 @@ resources:
   - ingress.yaml
   - hpa.yaml
 
-# Общие лейблы для всех ресурсов
 commonLabels:
   app.kubernetes.io/name: longread-blog
   app.kubernetes.io/version: "1.0.0"
   app.kubernetes.io/managed-by: kustomize
 
-# Префикс для всех ресурсов (опционально)
 # namePrefix: prod-
 
-# Общие аннотации
 commonAnnotations:
   description: "Longread blog platform - Variant 09"
