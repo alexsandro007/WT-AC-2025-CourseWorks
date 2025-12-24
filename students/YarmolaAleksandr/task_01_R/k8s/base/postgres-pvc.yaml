@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: postgres-pvc
+  namespace: longread-blog
+  labels:
+    app: postgres
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  # Укажите storageClassName в зависимости от вашего кластера
+  # Для Minikube: storageClassName: standard
+  # Для облачных провайдеров могут быть другие классы
+  # storageClassName: standard
