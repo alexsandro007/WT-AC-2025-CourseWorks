@@ -29,7 +29,7 @@ services:
       retries: 5
 
   backend:
-    build: ./apps/server
+    build: ./src/apps/server
     working_dir: /app
     environment:
       DATABASE_URL: "postgresql://appuser:password@postgres:5432/longread_blog?schema=public"
@@ -44,12 +44,12 @@ services:
       redis:
         condition: service_healthy
     volumes:
-      - ./apps/server:/app
+      - ./src/apps/server:/app
       - backend_logs:/app/logs
       - /app/node_modules
 
   frontend:
-    build: ./apps/web
+    build: ./src/apps/web
     working_dir: /app
     environment:
       REACT_APP_API_URL: "http://localhost:5000"
@@ -58,7 +58,7 @@ services:
     depends_on:
       - backend
     volumes:
-      - ./apps/web:/app
+      - ./src/apps/web:/app
       - /app/node_modules
     stdin_open: true
     tty: true
